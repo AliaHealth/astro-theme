@@ -3,20 +3,21 @@ import Container from "./Container.astro";
 const links = [
     {
         to: "/#features",
-        label: "Features",
+        label: "About",
     },
     {
-        to: "/#solution",
+        to: "/technology",
         label: "Solution",
     },
     {
         to: "/#reviews",
-        label: "Reviews",
+        label: "Team",
     },
     {
-        to: "https://github.com/luasenvy/nextjs-astro-theme",
-        label: "NextJS Version",
+        to: "/#footer",
+        label: "Contact Us",
     },
+    
 ];
 ---
 
@@ -51,15 +52,15 @@ const links = [
                                     </a>
                                 ))
                             }
-                            <a href="https://tailtips.dev" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4">
-                                <span>TailwindCSS Tips</span>
+                            <a href="#home" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4">
+                                <span>Join the Waitlist</span>
                                 <span class="flex rounded-full border bg-primary/20 px-2 py-0.5 text-xs tracking-wider text-purple-700 dark:bg-white/10 dark:text-orange-300">New</span>
                             </a>
                         </div>
                     </div>
 
                     <div class="mt-12 lg:mt-0">
-                        <a href="/register" class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+                        <a href="/#home" class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
                             <span class="relative text-sm font-semibold text-white"> Get Started</span>
                         </a>
                     </div>
