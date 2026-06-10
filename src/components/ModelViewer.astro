@@ -1,0 +1,75 @@
+<canvas id="model-canvas" class="w-full h-full"></canvas>
+
+<script>
+  import * as THREE from 'three'
+  import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+
+  const canvas = document.getElementById('model-canvas') as HTMLCanvasElement
+  const parent = canvas.parentElement!
+
+  // Scene
+  const scene = new THREE.Scene()
+
+  // Camera
+  const camera = new THREE.PerspectiveCamera(45, parent.clientWidth / parent.clientHeight, 0.1, 100)
+  camera.position.set(0, 0, 3)
+
+  // Renderer
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true })
+  renderer.setSize(parent.clientWidth, parent.clientHeight)
+  renderer.setPixelRatio(window.devicePixelRatio)
+  renderer.outputColorSpace = THREE.SRGBColorSpace
+
+  // Lighting
+  const ambient = new THREE.AmbientLight(0xffffff, 1.2)
+  scene.add(ambient)
+
+  const key = new THREE.DirectionalLight(0xffffff, 2)
+  key.position.set(5, 5, 5)
+  scene.add(key)
+
+  const fill = new THREE.DirectionalLight(0xffffff, 0.5)
+  fill.position.set(-5, 0, -5)
+  scene.add(fill)
+
+  // Controls (optional — lets user drag to rotate manually too)
+  const controls = new OrbitControls(camera, renderer.domElement)
+  controls.enableZoom = false
+  controls.enablePan = false
+  controls.autoRotate = true
+  controls.autoRotateSpeed = 1.5  // adjust speed here
+
+  // Load model
+  const loader = new GLTFLoader()
+  loader.load('/model.glb', (gltf) => {
+    const model = gltf.scene
+
+    // Centre the model
+    const box = new THREE.Box3().setFromObject(model)
+    const centre = box.getCenter(new THREE.Vector3())
+    model.position.sub(centre)
+
+    // Scale to fit
+    const size = box.getSize(new THREE.Vector3())
+    const maxDim = Math.max(size.x, size.y, size.z)
+    model.scale.setScalar(2 / maxDim)
+
+    scene.add(model)
+  })
+
+  // Resize handler
+  window.addEventListener('resize', () => {
+    camera.aspect = parent.clientWidth / parent.clientHeight
+    camera.updateProjectionMatrix()
+    renderer.setSize(parent.clientWidth, parent.clientHeight)
+  })
+
+  // Animate
+  function animate() {
+    requestAnimationFrame(animate)
+    controls.update()
+    renderer.render(scene, camera)
+  }
+  animate()
+</script>
