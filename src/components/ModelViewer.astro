@@ -20,6 +20,7 @@
   renderer.setSize(parent.clientWidth, parent.clientHeight)
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.outputColorSpace = THREE.SRGBColorSpace
+  renderer.toneMapping = THREE.ACESFilmicToneMapping
 
   // Lighting
   const ambient = new THREE.AmbientLight(0xffffff, 1.2)
@@ -42,7 +43,7 @@
 
   // Load model
   const loader = new GLTFLoader()
-  loader.load('/model.glb', (gltf) => {
+  loader.load('/webtest2.glb', (gltf) => {
     const model = gltf.scene
 
     // Centre the model
@@ -56,6 +57,7 @@
     model.scale.setScalar(2 / maxDim)
 
     scene.add(model)
+    model.rotation.x = -Math.PI / 2.5  // if it's flat on its back
   })
 
   // Resize handler
