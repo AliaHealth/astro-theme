@@ -14,7 +14,7 @@ const links = [
         label: "Team",
     },
     {
-        to: "/#footer",
+        to: "#footer",
         label: "Contact Us",
     },
     
@@ -27,11 +27,13 @@ const links = [
             <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
                 <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-fit">
                     <a href="/#home" aria-label="logo" class="flex items-center space-x-2">
-                        <div aria-hidden="true" class="flex space-x-1">
-                            <div class="size-4 rounded-full bg-gray-900 dark:bg-white"></div>
-                            <!--- Insert Alia Logo -->
+                        <div aria-hidden="true" class="flex space-x-4">
+                           <a href="/#home" aria-label="logo" class="flex items-center space-x-2">
+    <img src="/images/alia1.png" alt="Alia Health logo" class="h-8 w-auto" />
+
+</a>
                         </div>
-                        <span class="text-2xl font-bold text-gray-900 dark:text-white">Alia Health</span>
+                        <span class="text-2xl font-bold text-gray-900 dark:text-white ml-4">Alia Health</span>
                     </a>
 
                     <div class="relative flex max-h-10 items-center lg:hidden">
@@ -52,7 +54,7 @@ const links = [
                                     </a>
                                 ))
                             }
-                            <a href="#home" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4">
+                            <a href="/#home" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4">
                                 <span>Join the Waitlist</span>
                                 <span class="flex rounded-full border bg-primary/20 px-2 py-0.5 text-xs tracking-wider text-purple-700 dark:bg-white/10 dark:text-orange-300">New</span>
                             </a>

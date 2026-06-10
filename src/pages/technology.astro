@@ -4,6 +4,12 @@ import Container from '../components/container.astro';
 ---
 
 <Layout title="Technology | Alia Health">
+
+  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+  </div>
+
   <Container>
     <div class="pt-36 pb-24">
 
@@ -13,86 +19,246 @@ import Container from '../components/container.astro';
           How it <span class="text-primary">works</span>
         </h1>
         <p class="mt-4 text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
-          , in just three clicks.
+          Understand your body in three steps.
         </p>
       </div>
 
       <!-- Three Step Images -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-
-        <!-- Step 1 -->
         <div class="flex flex-col items-center text-center">
-          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 1 — Collect</h3>
+          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 1: Collect</h3>
           <div class="w-full aspect-square rounded-2xl bg-gray-100 dark:bg-gray-800 overflow-hidden">
-            <img
-              src="/images/step1.jpg"
-              alt="Collection step"
-              class="w-full h-full object-cover"
-            />
+            <img src="/images/step1.png" alt="Collection step" class="w-full h-full object-cover"/>
           </div>
           <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-            A short description of what happens in step one. Keep it simple and accessible.
+            Portable, non-invasive serum collection. Virtually painless. No labs, no shipping.
           </p>
         </div>
-
-        <!-- Step 2 -->
         <div class="flex flex-col items-center text-center">
-          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 2 — Analyse</h3>
+          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 2: Test</h3>
           <div class="w-full aspect-square rounded-2xl bg-gray-100 dark:bg-gray-800 overflow-hidden">
-            <img
-              src="/images/step2.jpg"
-              alt="Analysis step"
-              class="w-full h-full object-cover"
-            />
+            <img src="/images/step2.png" alt="Analysis step" class="w-full h-full object-cover"/>
           </div>
           <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-            A short description of what happens in step two. Focus on the benefit to the user.
+            Press once to start. Analogue, shelf-stable hardware, no electronics needed.
           </p>
         </div>
-
-        <!-- Step 3 -->
         <div class="flex flex-col items-center text-center">
-          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 3 — Understand</h3>
+          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 3: Analyse</h3>
           <div class="w-full aspect-square rounded-2xl bg-gray-100 dark:bg-gray-800 overflow-hidden">
-            <img
-              src="/images/step3.jpg"
-              alt="Results step"
-              class="w-full h-full object-cover"
-            />
+            <img src="/images/step3.png" alt="Results step" class="w-full h-full object-cover"/>
           </div>
           <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-            A short description of step three. What does the user walk away with?
+            Smartphone camera analysis. Real-time, accurate results, tailored to you.
           </p>
         </div>
-
       </div>
 
       <!-- Hardware Section -->
       <div class="mb-32 max-w-3xl mx-auto">
-        <h2 class="text-gray-900 dark:text-white font-bold text-4xl mb-6">
-          The hardware
-        </h2>
-        <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-4">
-          Your detailed hardware description goes here. Explain the technology, the materials,
-          how it was designed, and why it matters. This is where you can go deeper for the
-          curious reader.
+        <h2 class="text-gray-900 dark:text-white font-bold text-4xl mb-6">The hardware</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
+          One small blood sample is all it takes to accurately measure the levels of 8+ nutritional biomarkers in the body. Click & twist the sample collector into the testing chamber, wait for 15 minutes, then scan the test with your phone's camera for instant results, longitudinal health insights, and personalised recommendations to improve your nutrition.
         </p>
-        <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-          A second paragraph if needed. Talk about accuracy, certifications, or what makes
-          your approach different from existing solutions on the market.
+        <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
+          Through cutting-edge machine learning to interpret colorimetric results, our tests can provide lab-grade accuracy at stick-test prices for the full range of micronutrients. Our first testing kits will support:
         </p>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {[
+            "Vitamin D", "Vitamin B12", "Vitamin B9",
+            "Vitamin K", "Potassium", "Iron",
+            "Ferritin", "sTfR", "CRP"
+          ].map(marker => (
+            <li class="flex items-center gap-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl px-4 py-3 text-sm font-medium shadow-sm">
+              <span class="size-2 rounded-full bg-primary flex-shrink-0"></span>
+              {marker}
+            </li>
+          ))}
+        </ul>
+        <p class="mt-6 text-gray-500 dark:text-gray-400 text-sm italic">And we're just getting started.</p>
       </div>
 
-      <!-- Software Section (placeholder) -->
+      <!-- Software Section -->
+      <div class="mb-32 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-gray-900 dark:text-white font-bold text-4xl mb-6">The software</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-4">
+              Our app transforms raw test results into a clear, actionable picture of your health. Built for everyday use, it tracks your levels over time, spots trends before they become problems, and gives you personalised guidance grounded in your own biology.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-4">
+              No medical jargon. No confusing charts. Just the information you need to feel your best - delivered privately and instantly.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+              Enterprise software is available for organisations to help improve the health of your clients. Perfect for care homes, nutritional clinics, and sports teams.
+            </p>
+          </div>
+          <div class="w-full aspect-[852/1844] rounded-3xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center">
+            <img
+              src="/images/AppImage1.png"
+              alt="Alia Health app screenshot"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.querySelector('span').style.display='flex'"
+            />
+            <span class="hidden w-full h-full items-center justify-center text-gray-400 dark:text-gray-600 text-sm">
+              App screenshot coming soon
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- What You Get -->
+      <div class="mb-32">
+        <div class="text-center mb-12">
+          <h2 class="text-gray-900 dark:text-white font-bold text-4xl md:text-5xl">What you get</h2>
+          <p class="mt-4 text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
+            Everything you need to take control of your nutrition - in one place.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-xl shadow-gray-600/5 p-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6">
+              <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Your Nutrition Score</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">A single, clear score that reflects your overall nutritional status - updated every time you test.</p>
+            </div>
+
+            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6">
+              <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                </svg>
+              </div>
+              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Enhanced Insights</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">No more confusion. Understand what your results mean, why they matter, and what drives them.</p>
+            </div>
+
+            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6">
+              <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+                </svg>
+              </div>
+              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Pattern Recognition</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Our system learns from your data over time, identifying trends and flagging changes before you feel them.</p>
+            </div>
+
+            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6">
+              <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Passive Tracking</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Connect your wearables and health apps for a fuller picture. Alia works quietly in the background.</p>
+            </div>
+
+            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6 sm:col-span-2 lg:col-span-1">
+              <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                </svg>
+              </div>
+              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Personalised Recommendations</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Actionable steps tailored to your biology and needs - from dietary changes to supplement guidance, specific to you.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
       <div class="max-w-3xl mx-auto">
-        <h2 class="text-gray-900 dark:text-white font-bold text-4xl mb-6">
-          The software
-        </h2>
-        <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-          Your software section content goes here. Coming soon.
-        </p>
+        <div class="text-center mb-12">
+          <h2 class="text-gray-900 dark:text-white font-bold text-4xl md:text-5xl">FAQ</h2>
+          <p class="mt-4 text-gray-500 dark:text-gray-400 text-lg">Everything you might want to know.</p>
+        </div>
+
+        <div class="space-y-4" id="faq">
+          {[
+            {
+              q: "How accurate is it?",
+              a: "Our technology is grounded in published scientific literature, and we are actively running validation studies to ensure the highest accuracy for our devices. Colorimetric assay methods utilising computer vision for detection have a well-established track record in clinical diagnostics, and we are bringing that rigour to an at-home format, without compromising on precision."
+            },
+            {
+              q: "Is my data secure?",
+              a: "You own your data. Full stop. Everything is fully encrypted, GDPR compliant, and never sold to third parties."
+            },
+            {
+              q: "Is this a medical device?",
+              a: "Alia Health is designed as a wellness tool to help you understand your nutritional status. It is not intended to diagnose, treat, or cure any medical condition. If you have specific health concerns, we always recommend speaking with a qualified healthcare professional."
+            },
+            {
+              q: "How often should I test?",
+              a: "We recommend testing every 4-8 weeks for most people. This gives enough time for meaningful changes in your biomarker levels to occur, while keeping you closely informed about your nutritional health. If you have a chronic illness, dietary restriction, or you're training with a goal in mind, more frequent testing can help spot patterns in your nutrition, and identify issues early."
+            },
+            {
+              q: "Do I need a smartphone?",
+              a: "Yes - the hardware itself requires no electronics or batteries, but our app uses your smartphone camera to read the test results and deliver your insights. The app will be available on both iOS and Android."
+            },
+            {
+              q: "When will it be available?",
+              a: "We are currently in development and running our early validation studies. Join the waitlist to be among the first to know when we launch, and to get exclusive early access."
+            },
+            {
+              q: "How is this different from existing home testing kits?",
+              a: "Most home testing kits require you to post a sample to a lab and wait days for results, or offers binary (sufficient/deficient) readouts. Alia gives you quantitative results in 15 minutes, at home, at a fraction of the cost, and our software turns those results into a continuous picture of your health over time."
+            }
+          ].map((item, i) => (
+            <div class="rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-hidden shadow-sm">
+              <button
+                class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left gap-4"
+                aria-expanded="false"
+              >
+                <span class="text-gray-900 dark:text-white font-medium">{item.q}</span>
+                <svg class="faq-icon size-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-answer hidden px-6 pb-5">
+                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
     </div>
   </Container>
 </Layout>
+
+<script>
+  document.querySelectorAll(".faq-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const answer = btn.nextElementSibling as HTMLElement
+      const icon = btn.querySelector(".faq-icon") as HTMLElement
+      const isOpen = btn.getAttribute("aria-expanded") === "true"
+
+      // Close all others
+      document.querySelectorAll(".faq-btn").forEach(other => {
+        if (other !== btn) {
+          other.setAttribute("aria-expanded", "false")
+          ;(other.nextElementSibling as HTMLElement).classList.add("hidden")
+          ;(other.querySelector(".faq-icon") as HTMLElement).style.transform = ""
+        }
+      })
+
+      // Toggle this one
+      if (isOpen) {
+        btn.setAttribute("aria-expanded", "false")
+        answer.classList.add("hidden")
+        icon.style.transform = ""
+      } else {
+        btn.setAttribute("aria-expanded", "true")
+        answer.classList.remove("hidden")
+        icon.style.transform = "rotate(180deg)"
+      }
+    })
+  })
+</script>
