@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro"
 import { createClient } from "@supabase/supabase-js"
-
+export const prerender = false
 export const POST: APIRoute = async ({ request }) => {
   const { email } = await request.json()
 
