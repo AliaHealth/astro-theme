@@ -1,8 +1,9 @@
 import type { APIRoute } from "astro"
 import { createClient } from "@supabase/supabase-js"
-
+export const prerender = false;
 export const GET: APIRoute = async () => {
-  const supabase = createClient(
+  
+  const supabase = createClient(n
     import.meta.env.PUBLIC_SUPABASE_URL,
     import.meta.env.PUBLIC_SUPABASE_ANON_KEY
   )
