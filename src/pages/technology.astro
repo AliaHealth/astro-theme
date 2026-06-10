@@ -5,9 +5,9 @@ import Container from '../components/Container.astro';
 
 <Layout title="Technology | Alia Health">
 
-  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40">
+    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400"></div>
+    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300"></div>
   </div>
 
   <Container>
@@ -15,10 +15,10 @@ import Container from '../components/Container.astro';
 
       <!-- Page Header -->
       <div class="text-center mb-20">
-        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl text-balance">
+        <h1 class="text-gray-900 font-bold text-5xl md:text-6xl text-balance">
           How it <span class="text-primary">works</span>
         </h1>
-        <p class="mt-4 text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
+        <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
           Understand your body in three steps.
         </p>
       </div>
@@ -26,29 +26,29 @@ import Container from '../components/Container.astro';
       <!-- Three Step Images -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
         <div class="flex flex-col items-center text-center">
-          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 1: Collect</h3>
-          <div class="w-full aspect-square rounded-2xl bg-gray-100 dark:bg-gray-800 overflow-hidden">
+          <h3 class="text-gray-900 font-semibold text-xl mb-4">Step 1: Collect</h3>
+          <div class="w-full aspect-square rounded-2xl bg-gray-100 overflow-hidden">
             <img src="/images/step1.png" alt="Collection step" class="w-full h-full object-cover"/>
           </div>
-          <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+          <p class="mt-4 text-gray-500 text-sm leading-relaxed">
             Portable, non-invasive serum collection. Virtually painless. No labs, no shipping.
           </p>
         </div>
         <div class="flex flex-col items-center text-center">
-          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 2: Test</h3>
-          <div class="w-full aspect-square rounded-2xl bg-gray-100 dark:bg-gray-800 overflow-hidden">
+          <h3 class="text-gray-900 font-semibold text-xl mb-4">Step 2: Test</h3>
+          <div class="w-full aspect-square rounded-2xl bg-gray-100 overflow-hidden">
             <img src="/images/step2.png" alt="Analysis step" class="w-full h-full object-cover"/>
           </div>
-          <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+          <p class="mt-4 text-gray-500 text-sm leading-relaxed">
             Press once to start. Analogue, shelf-stable hardware, no electronics needed.
           </p>
         </div>
         <div class="flex flex-col items-center text-center">
-          <h3 class="text-gray-900 dark:text-white font-semibold text-xl mb-4">Step 3: Analyse</h3>
-          <div class="w-full aspect-square rounded-2xl bg-gray-100 dark:bg-gray-800 overflow-hidden">
+          <h3 class="text-gray-900 font-semibold text-xl mb-4">Step 3: Analyse</h3>
+          <div class="w-full aspect-square rounded-2xl bg-gray-100 overflow-hidden">
             <img src="/images/step3.png" alt="Results step" class="w-full h-full object-cover"/>
           </div>
-          <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+          <p class="mt-4 text-gray-500 text-sm leading-relaxed">
             Smartphone camera analysis. Real-time, accurate results, tailored to you.
           </p>
         </div>
@@ -56,11 +56,11 @@ import Container from '../components/Container.astro';
 
       <!-- Hardware Section -->
       <div class="mb-32 max-w-3xl mx-auto">
-        <h2 class="text-gray-900 dark:text-white font-bold text-4xl mb-6">The hardware</h2>
-        <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
+        <h2 class="text-gray-900 font-bold text-4xl mb-6">The hardware</h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
           One small blood sample is all it takes to accurately measure the levels of 8+ nutritional biomarkers in the body. Click & twist the sample collector into the testing chamber, wait for 15 minutes, then scan the test with your phone's camera for instant results, longitudinal health insights, and personalised recommendations to improve your nutrition.
         </p>
-        <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
           Through cutting-edge machine learning to interpret colorimetric results, our tests can provide lab-grade accuracy at stick-test prices for the full range of micronutrients. Our first testing kits will support:
         </p>
         <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -69,38 +69,38 @@ import Container from '../components/Container.astro';
             "Vitamin K", "Potassium", "Iron",
             "Ferritin", "sTfR", "CRP"
           ].map(marker => (
-            <li class="flex items-center gap-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl px-4 py-3 text-sm font-medium shadow-sm">
+            <li class="flex items-center gap-2 text-gray-700 bg-white border border-gray-100 rounded-xl px-4 py-3 text-sm font-medium shadow-sm">
               <span class="size-2 rounded-full bg-primary flex-shrink-0"></span>
               {marker}
             </li>
           ))}
         </ul>
-        <p class="mt-6 text-gray-500 dark:text-gray-400 text-sm italic">And we're just getting started.</p>
+        <p class="mt-6 text-gray-500 text-sm italic">And we're just getting started.</p>
       </div>
 
       <!-- Software Section -->
       <div class="mb-32 max-w-5xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-gray-900 dark:text-white font-bold text-4xl mb-6">The software</h2>
-            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-4">
+            <h2 class="text-gray-900 font-bold text-4xl mb-6">The software</h2>
+            <p class="text-gray-600 text-lg leading-relaxed mb-4">
               Our app transforms raw test results into a clear, actionable picture of your health. Built for everyday use, it tracks your levels over time, spots trends before they become problems, and gives you personalised guidance grounded in your own biology.
             </p>
-            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-4">
+            <p class="text-gray-600 text-lg leading-relaxed mb-4">
               No medical jargon. No confusing charts. Just the information you need to feel your best - delivered privately and instantly.
             </p>
-            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            <p class="text-gray-600 text-lg leading-relaxed">
               Enterprise software is available for organisations to help improve the health of your clients. Perfect for care homes, nutritional clinics, and sports teams.
             </p>
           </div>
-          <div class="w-full aspect-[852/1844] rounded-3xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center">
+          <div class="w-full aspect-[852/1844] rounded-3xl bg-gray-100 border border-gray-200 overflow-hidden flex items-center justify-center">
             <img
               src="/images/AppImage1.png"
               alt="Alia Health app screenshot"
               class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.parentElement.querySelector('span').style.display='flex'"
             />
-            <span class="hidden w-full h-full items-center justify-center text-gray-400 dark:text-gray-600 text-sm">
+            <span class="hidden w-full h-full items-center justify-center text-gray-400 text-sm">
               App screenshot coming soon
             </span>
           </div>
@@ -110,63 +110,63 @@ import Container from '../components/Container.astro';
       <!-- What You Get -->
       <div class="mb-32">
         <div class="text-center mb-12">
-          <h2 class="text-gray-900 dark:text-white font-bold text-4xl md:text-5xl">What you get</h2>
-          <p class="mt-4 text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
+          <h2 class="text-gray-900 font-bold text-4xl md:text-5xl">What you get</h2>
+          <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
             Everything you need to take control of your nutrition - in one place.
           </p>
         </div>
 
-        <div class="rounded-3xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-xl shadow-gray-600/5 p-8">
+        <div class="rounded-3xl border border-gray-100 bg-white shadow-xl shadow-gray-600/5 p-8">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6">
+            <div class="rounded-2xl bg-gray-50 border border-gray-100 p-6">
               <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Your Nutrition Score</h3>
-              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">A single, clear score that reflects your overall nutritional status - updated every time you test.</p>
+              <h3 class="text-gray-900 font-semibold text-lg mb-2">Your Nutrition Score</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">A single, clear score that reflects your overall nutritional status - updated every time you test.</p>
             </div>
 
-            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6">
+            <div class="rounded-2xl bg-gray-50 border border-gray-100 p-6">
               <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                 </svg>
               </div>
-              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Enhanced Insights</h3>
-              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">No more confusion. Understand what your results mean, why they matter, and what drives them.</p>
+              <h3 class="text-gray-900 font-semibold text-lg mb-2">Enhanced Insights</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">No more confusion. Understand what your results mean, why they matter, and what drives them.</p>
             </div>
 
-            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6">
+            <div class="rounded-2xl bg-gray-50 border border-gray-100 p-6">
               <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
                 </svg>
               </div>
-              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Pattern Recognition</h3>
-              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Our system learns from your data over time, identifying trends and flagging changes before you feel them.</p>
+              <h3 class="text-gray-900 font-semibold text-lg mb-2">Pattern Recognition</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Our system learns from your data over time, identifying trends and flagging changes before you feel them.</p>
             </div>
 
-            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6">
+            <div class="rounded-2xl bg-gray-50 border border-gray-100 p-6">
               <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Passive Tracking</h3>
-              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Connect your wearables and health apps for a fuller picture. Alia works quietly in the background.</p>
+              <h3 class="text-gray-900 font-semibold text-lg mb-2">Passive Tracking</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Connect your wearables and health apps for a fuller picture. Alia works quietly in the background.</p>
             </div>
 
-            <div class="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6 sm:col-span-2 lg:col-span-1">
+            <div class="rounded-2xl bg-gray-50 border border-gray-100 p-6 sm:col-span-2 lg:col-span-1">
               <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
                 </svg>
               </div>
-              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2">Personalised Recommendations</h3>
-              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Actionable steps tailored to your biology and needs - from dietary changes to supplement guidance, specific to you.</p>
+              <h3 class="text-gray-900 font-semibold text-lg mb-2">Personalised Recommendations</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Actionable steps tailored to your biology and needs - from dietary changes to supplement guidance, specific to you.</p>
             </div>
 
           </div>
@@ -176,8 +176,8 @@ import Container from '../components/Container.astro';
       <!-- FAQ -->
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-gray-900 dark:text-white font-bold text-4xl md:text-5xl">FAQ</h2>
-          <p class="mt-4 text-gray-500 dark:text-gray-400 text-lg">Everything you might want to know.</p>
+          <h2 class="text-gray-900 font-bold text-4xl md:text-5xl">FAQ</h2>
+          <p class="mt-4 text-gray-500 text-lg">Everything you might want to know.</p>
         </div>
 
         <div class="space-y-4" id="faq">
@@ -211,18 +211,18 @@ import Container from '../components/Container.astro';
               a: "Most home testing kits require you to post a sample to a lab and wait days for results, or offers binary (sufficient/deficient) readouts. Alia gives you quantitative results in 15 minutes, at home, at a fraction of the cost, and our software turns those results into a continuous picture of your health over time."
             }
           ].map((item, i) => (
-            <div class="rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-hidden shadow-sm">
+            <div class="rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm">
               <button
                 class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left gap-4"
                 aria-expanded="false"
               >
-                <span class="text-gray-900 dark:text-white font-medium">{item.q}</span>
+                <span class="text-gray-900 font-medium">{item.q}</span>
                 <svg class="faq-icon size-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div class="faq-answer hidden px-6 pb-5">
-                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{item.a}</p>
+                <p class="text-gray-600 text-sm leading-relaxed">{item.a}</p>
               </div>
             </div>
           ))}
