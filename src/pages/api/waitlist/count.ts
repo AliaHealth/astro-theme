@@ -3,7 +3,7 @@ import { createClient } from "@supabase/supabase-js"
 export const prerender = false;
 export const GET: APIRoute = async () => {
   
-  const supabase = createClient(n
+  const supabase = createClient(
     import.meta.env.PUBLIC_SUPABASE_URL,
     import.meta.env.PUBLIC_SUPABASE_ANON_KEY
   )
